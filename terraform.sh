@@ -20,7 +20,7 @@ fi
 
 if [ $# -eq 1 ]
     if [ $1 == "init" ]; then
-        terraform init -backend-config='vars/providers.tfvars'
+        terraform init -reconfigure -backend-config='vars/providers.tfvars'
         exit 0
     fi
 then
